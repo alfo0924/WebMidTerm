@@ -1,0 +1,121 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #a2a2a2;
+    margin: 0;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    flex-flow: row wrap;
+
+    text-align: center;
+
+
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+.c3031
+{
+    flex-direction: column;
+    display: flex;
+
+
+}
+
+
+/*p*/
+/*{*/
+/*    text-align: center;*/
+
+
+/*}*/
+
+/*.column  img:hover*/
+/*{*/
+/*    padding: 50px;*/
+/*    cursor: pointer;*/
+/*    border-radius: 20%;*/
+/*    border: solid 5px rgb(61, 61, 61);*/
+
+/*    background-color: rgba(2, 221, 250, 0.73);*/
+/*}*/
+
+
+
+
+
+.c3031 :hover
+{
+    padding: 50px;
+    cursor: pointer;
+    border-radius: 20%;
+    border:  5px rgba(2, 221, 250, 0.73);;
+
+    background-color: rgba(2, 221, 250, 0.73);
+
+    transition: background-color 1.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .column {
+        flex: 33%;
+        max-width: 33%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 700px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

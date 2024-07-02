@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="WebMidTermCorrectedVersion" aria-label="This is a web about Correct CSS layout after test " >
+    <meta name="WebMidTermCorrectedVersion" content="Demonstrates Corrected Version of CSS Midterm web layout" >
+    <!--import CDN fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css.css"  >-->
+
+    <title> WebMidTermCorrectedVersion </title>
+
+
+    <style>
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background-color: #a2a2a2;
+            margin: 0;
+            font-family: "Jersey 20", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+
+            flex-flow: row wrap;
+
+            text-align: center;
+
+
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+
+
+
+
+
+
+
+        /*added .c3031 class in order to set it more specifically*/
+        .c3031:hover
+        {
+            padding: 50px;
+            cursor: pointer;
+
+            /*border-radius changes to 10%*/
+            border-radius: 10%;
+            /*cancel  border solid line to smooth the animation*/
+            border: 5px  rgba(2, 221, 250, 0.73);
+            background-color: rgba(2, 221, 250, 0.73);
+
+            /*added transition*/
+            transition: background-color 1.5s ease-in-out;
+        }
+
+        /*added .c3031 to set the details*/
+        .c3031 p
+        {
+            padding: 5px;
+            font-size: 20px;
+            font-weight: 700;
+
+        }
+
+
+        /*binding for hover on.c3031 area or img that gets border-radius effects*/
+
+        .c3031:hover img
+        {
+            border-radius: 10%;
+        }
+        .c3031 img:hover
+        {
+            border-radius: 10%;
+        }
+
+
+
+
+
+
+
+        /*.c3031:hover p {*/
+        /*    visibility: visible;*/
+        /*    transition: visibility 1.5s ease-in-out;*/
+        /*}*/
+
+        /*.c3031 p {*/
+        /*    visibility: hidden;*/
+        /*}*/
+
+
+
+
+
+
+        /*.c3031*/
+        /*{*/
+        /*    flex-direction: column;*/
+        /*    display: flex;*/
+        /*    !*background: red;*!*/
+
+
+        /*}*/
+
+
+        /*.c3031 :hover*/
+        /*{*/
+        /*    padding: 50px;*/
+        /*    cursor: pointer;*/
+        /*    border-radius: 20%;*/
+        /*    border: solid 5px rgba(2, 221, 250, 0.73);;*/
+
+        /*    background-color: rgba(2, 221, 250, 0.73);*/
+
+        /*    transition: background-color 1.5s ease-in-out;*/
+        /*}*/
+
+
+
+
+        /*.c3031:hover p {*/
+        /*    visibility: visible;*/
+        /*    transition: visibility 1.5s ease-in-out;*/
+        /*}*/
+
+        /*.c3031 p {*/
+        /*    visibility: hidden;*/
+        /*}*/
+
+
+
+
+
+        /*p*/
+        /*{*/
+        /*    text-align: center;*/
+
+
+        /*}*/
+
+        /*.column  img:hover*/
+        /*{*/
+        /*    padding: 50px;*/
+        /*    cursor: pointer;*/
+        /*    border-radius: 20%;*/
+        /*    border: solid 5px rgb(61, 61, 61);*/
+
+        /*    background-color: rgba(2, 221, 250, 0.73);*/
+        /*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (max-width: 900px) {
+            .column {
+                flex: 33%;
+                max-width: 33%;
+                justify-content: space-around;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1 style="font-size: 5rem" >Click to Vote</h1>
+    <!--    <p>Resize the browser window to see the responsive effect.</p>-->
+    <p style="font-size: 2rem;color: rgba(21,21,21,0.42) " >Click the image to vote for your favorite photos </p>
+</div>
+
+<div class="row"  >
+    <div class="column"    >
+
+        <div class="c3031" id="11" @click="count11++">
+
+            <img src="imgs/photo-1.jpg" style="width:100%">
+            <p>{{ "count: " + count11 }}</p>
+
+        </div>
+
+
+        <div class="c3031"  id="22" @click="count22++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-2.jpg" style="width:100%">
+            <p>{{ " count: " + count22 }}</p> <!-- Display count -->
+        </div>
+
+        <div class="c3031"  id="33" @click="count33++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-3.jpg" style="width:100%">
+            <p>{{ " count: " + count33 }}</p> <!-- Display count -->
+        </div>
+
+
+        <div class="c3031"  id="44" @click="count44++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-4.jpg" style="width:100%">
+            <p>{{ " count: " + count44 }}</p> <!-- Display count -->
+        </div>
+
+        <div class="c3031"  id="55" @click="count55++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-5.jpg" style="width:100%">
+            <p>{{ " count: " + count55 }}</p> <!-- Display count -->
+        </div>
+
+
+
+    </div>
+    <div class="column">
+
+        <div  class="c3031" id="88" @click="count88++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-8.jpg" style="width:100%">
+            <p>{{ " count: " + count88 }}</p> <!-- Display count -->
+        </div>
+
+
+        <div  class="c3031" id="99" @click="count99++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-9.jpg" style="width:100%">
+            <p>{{ " count: " + count99 }}</p> <!-- Display count -->
+        </div>
+
+
+        <div class="c3031"  id="1010" @click="count1010++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-10.jpg" style="width:100%">
+            <p>{{ " count: " + count1010 }}</p> <!-- Display count -->
+        </div>
+
+
+        <div  class="c3031" id="1111" @click="count1111++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-11.jpg" style="width:100%">
+            <p>{{ " count: " + count1111 }}</p> <!-- Display count -->
+        </div>
+
+
+        <div class="c3031" id="1212" @click="count1212++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-12.jpg" style="width:100%">
+            <p>{{ " count: " + count1212 }}</p> <!-- Display count -->
+        </div>
+
+
+        <div class="c3031" id="1313" @click="count1313++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-13.jpg" style="width:100%">
+            <p>{{ " count: " + count1313 }}</p> <!-- Display count -->
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <div class="column">
+
+        <div class="c3031" id="01" @click="count01++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-1.jpg" style="width:100%">
+            <p>{{ " count: " + count01 }}</p> <!-- Display count -->
+        </div>
+
+        <div class="c3031" id="02" @click="count02++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-2.jpg" style="width:100%">
+            <p>{{ " count: " + count02 }}</p> <!-- Display count -->
+        </div>
+
+        <div class="c3031" id="03" @click="count03++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-3.jpg" style="width:100%">
+            <p>{{ " count: " + count03 }}</p> <!-- Display count -->
+        </div>
+
+        <div class="c3031"  id="04" @click="count04++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-4.jpg" style="width:100%">
+            <p>{{ " count: " + count04 }}</p> <!-- Display count -->
+        </div>
+
+        <div  class="c3031" id="05" @click="count05++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-5.jpg" style="width:100%">
+            <p>{{ " count: " + count05 }}</p> <!-- Display count -->
+        </div>
+
+    </div>
+    <div class="column">
+
+        <div  class="c3031" id="08" @click="count08++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-8.jpg" style="width:100%">
+            <p>{{ " count: " + count08 }}</p> <!-- Display count -->
+        </div>
+
+        <div  class="c3031"  id="09" @click="count09++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-9.jpg" style="width:100%">
+            <p>{{ " count: " + count09 }}</p> <!-- Display count -->
+        </div>
+
+        <div  class="c3031"  id="010" @click="count010++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-10.jpg" style="width:100%">
+            <p>{{ " count: " + count010 }}</p> <!-- Display count -->
+        </div>
+
+        <div  class="c3031"  id="011" @click="count011++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-11.jpg" style="width:100%">
+            <p>{{ " count: " + count011 }}</p> <!-- Display count -->
+        </div>
+
+        <div  class="c3031"  id="012" @click="count012++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-12.jpg" style="width:100%">
+            <p>{{ " count: " + count012 }}</p> <!-- Display count -->
+        </div>
+
+        <div  class="c3031" id="013" @click="count013++"> <!-- Added @click event listener to count clicks -->
+            <img src="imgs/photo-13.jpg" style="width:100%">
+            <p>{{ " count: " + count013 }}</p> <!-- Display count -->
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Vue.js library -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js" ></script>
+<!--<script src="javascript.js" defer ></script>-->
+<script>
+
+
+
+
+    const app = Vue.createApp({
+        data() {
+            return {
+                count11: 0, // Separate count for each image
+                // Add more count variables for other images if needed
+                count22:0,
+                count33:0,
+                count44:0,
+                count55:0,
+                count66:0,
+                count77:0,
+                count88:0,
+                count99:0,
+                count1010:0,
+                count1212:0,
+                count1111:0,
+                count01:0,
+                count02:0,
+                count03:0,
+                count04:0,
+                count05:0,
+                count06:0,
+                count07:0,
+                count08:0,
+                count09:0,
+                count10:0,
+                count011:0,
+                count012:0,
+                count013:0,
+
+
+
+            }
+        }
+    });
+    app.mount('.row'); // Mount Vue app to .row element
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
